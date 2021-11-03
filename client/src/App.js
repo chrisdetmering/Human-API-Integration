@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, } from "react";
+import axios from "axios";
+import {
+  Switch,
+  Route,
+  useHistory
+} from "react-router-dom";
+import ClinicalAPI from "./Components/ClinicalAPI";
+import Connect from "./Components/Connect";
+import Login from "./Components/Login";
+import WellnessAPI from "./Components/WellnessAPI";
 
 function App() {
+  const [sessionToken, setSessionToken] = useState('');
+  const history = useHistory();
+
+  const login = async (username, email) => {
+    const config = {
+      method: 'POST',
+      url: '/login',
+      headers: { 'content-type': 'application/json' },
+      data: JSON.stringify({ client_user_id: username, client_user_email: email })
+    }
+
+    try {
+      const response = await axios(config);
+      if (response.status === 200) {
+        setSessionToken(response.data.session_token)
+        history.push('/connect')
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <Login login={login} />
+      </Route>
+      <Route path="/connect">
+        <Connect sessionToken={sessionToken} />
+      </Route>
+      <Route path="/clinical">
+        <ClinicalAPI />
+      </Route>
+      <Route path="/wellness">
+        <WellnessAPI />
+      </Route>
+    </Switch>
   );
 }
 

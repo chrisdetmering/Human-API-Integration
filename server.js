@@ -1,7 +1,130 @@
+require('dotenv').config();
+const { Pool } = require('pg')
+const expressSession = require('express-session');
+const pgSession = require('connect-pg-simple')(expressSession);
 const express = require('express');
 const path = require('path');
 const server = express();
+const axios = require('axios');
 
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'human_api',
+    password: 'ChrisSQL',
+})
+
+server.use(expressSession({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new pgSession({
+        pool: pool,
+    }),
+    cookie: { maxAge: 60 * 60 * 1000 }
+}));
+
+
+server.use(express.json())
 server.use('/', express.static(path.join(__dirname, 'client/build')))
 
+server.post('/login', async (req, res) => {
+    const { client_user_id, client_user_email } = req.body
+
+    const data = {
+        client_id: process.env.CLIENT_ID,
+        client_user_id,
+        client_user_email,
+        client_secret: process.env.CLIENT_SECRET,
+        type: "session"
+    }
+
+    const config = {
+        method: 'POST',
+        url: process.env.TOKEN_AUTH_ENDPOINT,
+        data
+    }
+
+    try {
+        const response = await axios(config);
+
+        req.session.session_token = response.data.session_token
+        req.session.client_user_id = client_user_id
+        res.status(200);
+        res.send(response.data);
+    } catch (error) {
+        res.status(500)
+        console.log(error)
+        res.send(error.data);
+    }
+
+})
+
+server.post('/logout', async (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            res.send({ errorMessage: error.message })
+        } else {
+            res.clearCookie('connect.sid')
+            res.status(200)
+            res.send({ message: 'You have been logged out!' })
+        }
+
+    });
+})
+
+//ACCESS TOKEN
+server.get('/api/access/token', async (req, res) => {
+    const data = {
+        client_id: process.env.CLIENT_ID,
+        client_user_id: req.session.client_user_id,
+        client_secret: process.env.CLIENT_SECRET,
+        type: "access"
+    }
+
+    const config = {
+        method: 'POST',
+        url: process.env.TOKEN_AUTH_ENDPOINT,
+        data
+    }
+
+    try {
+        const response = await axios(config);
+        req.session.access_token = response.data.access_token
+        res.status(200);
+        res.send(response.data);
+    } catch (error) {
+        console.log(error)
+        res.status(500)
+        res.send(error);
+    }
+})
+
+
+server.get('/api/clinical', async (req, res) => {
+    const token = req.session.access_token
+    const config = {
+        method: 'GET',
+        url: 'https://api.humanapi.co/v1/human/medical/vitals',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    }
+
+    try {
+        const response = await axios(config);
+        res.status(200);
+        res.send(response.data);
+    } catch (error) {
+        res.status(500)
+        res.send(error);
+    }
+})
+
+server.get('/api/wellness', async (req, res) => {
+    res.status(200);
+})
+
+
+server.get('*', (req, res) => res.sendFile(path.join(__dirname, './client/build/index.html')));
 server.listen(3000)
