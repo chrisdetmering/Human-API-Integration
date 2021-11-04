@@ -8,12 +8,19 @@ import {
     Icon,
 } from 'semantic-ui-react'
 import axios from 'axios';
+import ConnectModal from './Modal';
 
 
 const Connect = ({ sessionToken }) => {
+    const [open, setOpen] = useState(false)
+    const [summary, setSummary] = useState({})
 
     useEffect(() => {
-        HumanConnect.on("close", (response) => { console.log("Connect closed", response) });
+        HumanConnect.on("close", (response) => {
+            console.log(response)
+            setSummary(response)
+            setOpen(true)
+        });
         HumanConnect.on("connect", () => { console.log('connected') });
         HumanConnect.on("disconnect", (response) => { console.log("Source disconnected", response) });
     }, [])
@@ -26,7 +33,7 @@ const Connect = ({ sessionToken }) => {
 
     useEffect(() => {
         axios('/api/access/token')
-            .then(response => console.log(response))
+            .then(response => response)
             .catch(error => console.log(error))
     }, [])
 
@@ -76,6 +83,11 @@ const Connect = ({ sessionToken }) => {
                             Get Started
                             <Icon name='right arrow' />
                         </Button>
+                        <ConnectModal
+                            open={open}
+                            setOpen={setOpen}
+                            summary={summary}
+                        />
                     </span>
                 </p>
             </Container>

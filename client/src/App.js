@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useEffect, useState, } from "react";
 import axios from "axios";
 import {
   Switch,
@@ -12,7 +12,28 @@ import WellnessAPI from "./Components/WellnessAPI";
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
+  const [isLoading, setIsLoading] = useState(true)
   const history = useHistory();
+
+
+  useEffect(() => {
+    axios('/session')
+      .then(response => {
+        if (response.status === 200) {
+          setSessionToken(response.data.session_token)
+        } else {
+          history.push('/')
+        }
+      })
+      .catch(() => {
+        history.push('/')
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
+  }, [])
+
+
 
   const login = async (username, email) => {
     const config = {
@@ -32,6 +53,11 @@ function App() {
       console.error(error)
     }
   }
+
+  if (isLoading) {
+    return <div></div>
+  }
+
 
   return (
     <Switch>

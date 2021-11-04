@@ -12,7 +12,6 @@ const NavBar = () => {
     const logout = () => {
         axios('/logout', { method: 'POST' })
             .then(response => {
-                console.log(response)
                 if (response.status === 200) {
                     history.push('/')
                 }

@@ -73,6 +73,16 @@ server.post('/logout', async (req, res) => {
     });
 })
 
+server.get('/session', async (req, res) => {
+    if (req.session.client_user_id) {
+        const session_token = req.session.session_token
+        res.status(200).send({ session_token })
+    } else {
+        res.status(401).send({ message: 'You are not logged in' })
+    }
+})
+
+//HUMAN API
 //ACCESS TOKEN
 server.get('/api/access/token', async (req, res) => {
     const data = {
