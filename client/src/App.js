@@ -5,10 +5,10 @@ import {
   Route,
   useHistory
 } from "react-router-dom";
-import ClinicalAPI from "./Components/ClinicalAPI";
+import Clinical from "./Components/Clinical";
 import Connect from "./Components/Connect";
 import Login from "./Components/Login";
-import WellnessAPI from "./Components/WellnessAPI";
+import Reports from "./Components/Reports";
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -58,7 +58,6 @@ function App() {
     return <div></div>
   }
 
-
   return (
     <Switch>
       <Route exact path="/">
@@ -68,10 +67,10 @@ function App() {
         <Connect sessionToken={sessionToken} />
       </Route>
       <Route path="/clinical">
-        <ClinicalAPI />
+        <Clinical />
       </Route>
-      <Route path="/wellness">
-        <WellnessAPI />
+      <Route path="/reports">
+        <Reports />
       </Route>
     </Switch>
   );

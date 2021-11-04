@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import * as HumanConnect from "humanapi-connect-client";
-import NavBar from './NavBar';
+import NavBar from '../Utils/UI/NavBar';
 import {
     Button,
     Container,
@@ -8,16 +8,17 @@ import {
     Icon,
 } from 'semantic-ui-react'
 import axios from 'axios';
-import ConnectModal from './Modal';
+import SummaryModal from '../Utils/UI/Models/SummaryModal';
+import ConnectWarningModal from '../Utils/UI/Models/ConnectWarningModal';
 
 
 const Connect = ({ sessionToken }) => {
     const [open, setOpen] = useState(false)
+    const [isWarningModelOpen, setIsWarningModelOpen] = useState(false)
     const [summary, setSummary] = useState({})
 
     useEffect(() => {
         HumanConnect.on("close", (response) => {
-            console.log(response)
             setSummary(response)
             setOpen(true)
         });
@@ -34,7 +35,10 @@ const Connect = ({ sessionToken }) => {
     useEffect(() => {
         axios('/api/access/token')
             .then(response => response)
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.error(error)
+                setIsWarningModelOpen(true)
+            })
     }, [])
 
 
@@ -83,10 +87,14 @@ const Connect = ({ sessionToken }) => {
                             Get Started
                             <Icon name='right arrow' />
                         </Button>
-                        <ConnectModal
+                        <SummaryModal
                             open={open}
                             setOpen={setOpen}
                             summary={summary}
+                        />
+                        <ConnectWarningModal
+                            open={isWarningModelOpen}
+                            setOpen={setIsWarningModelOpen}
                         />
                     </span>
                 </p>

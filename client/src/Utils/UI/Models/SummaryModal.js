@@ -1,6 +1,6 @@
 import { Button, Icon, Modal } from 'semantic-ui-react'
 
-const ConnectModal = ({ open, setOpen, summary }) => {
+const SummaryModal = ({ open, setOpen, summary }) => {
 
     const isSummary = () => {
         return Object.keys(summary).length > 0
@@ -12,7 +12,7 @@ const ConnectModal = ({ open, setOpen, summary }) => {
                 return <li>NONE</li>
             } else {
                 return summary.currentConnections.map(connection => (
-                    <li>{connection.name}</li>
+                    <li key={connection.name}>{connection.name}</li>
                 ))
             }
         }
@@ -94,4 +94,4 @@ const ConnectModal = ({ open, setOpen, summary }) => {
     )
 }
 
-export default ConnectModal;
+export default SummaryModal;

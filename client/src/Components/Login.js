@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
-import { Banner } from "../Utils/HumanAPIBanner";
+import { Banner } from "../Utils/UI/HumanAPIBanner";
 
 
 const Login = ({ login }) => {

@@ -131,10 +131,37 @@ server.get('/api/clinical', async (req, res) => {
     }
 })
 
-server.get('/api/wellness', async (req, res) => {
-    res.status(200);
-})
+server.get('/api/reports', async (req, res) => {
+    const token = req.session.access_token
+    const config = {
+        method: 'GET',
+        url: 'https://api.humanapi.co/v1/human/medical/reports',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    }
+    try {
+        const response = await axios(config);
+        const reportId = response.data.filter(report => report.name === 'timeline')[0].id
 
+        const con = {
+            method: 'GET',
+            url: `https://api.humanapi.co/v1/human/medical/reports/${reportId}/raw?format=json`,
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        }
+
+        const result = await axios(con);
+        const summary = Object.entries(result.data);
+        res.status(200)
+            .send({ summary });
+    } catch (error) {
+        console.log(error)
+        res.status(500)
+            .send(error);
+    }
+})
 
 server.get('*', (req, res) => res.sendFile(path.join(__dirname, './client/build/index.html')));
 server.listen(3000)

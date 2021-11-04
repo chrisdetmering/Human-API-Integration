@@ -31,11 +31,10 @@ const NavBar = () => {
                 >
                     <NavLink to='/clinical' activeClassName="active">Clinical</NavLink>
                 </Menu.Item>
-
                 <Menu.Item
-                    name='wellness'
+                    name='reports'
                 >
-                    <NavLink to='/wellness'>Wellness</NavLink>
+                    <NavLink to='/reports'>Reports</NavLink>
                 </Menu.Item>
             </Menu.Menu>
             <Menu.Menu position='right'>
@@ -47,8 +46,6 @@ const NavBar = () => {
                         onClick={logout}
                         primary>Logout</Button>
                 </Menu.Item>
-
-
             </Menu.Menu>
         </Menu>
     </>)
