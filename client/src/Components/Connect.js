@@ -20,6 +20,7 @@ const Connect = ({ sessionToken }) => {
     useEffect(() => {
         HumanConnect.on("close", (response) => {
             setSummary(response)
+            createAccessToken()
             setOpen(true)
         });
         HumanConnect.on("connect", () => { console.log('connected') });
@@ -33,13 +34,17 @@ const Connect = ({ sessionToken }) => {
     }, [])
 
     useEffect(() => {
+        createAccessToken()
+    }, [])
+
+    const createAccessToken = () => {
         axios('/api/access/token')
             .then(response => response)
             .catch(error => {
                 console.error(error)
                 setIsWarningModelOpen(true)
             })
-    }, [])
+    }
 
 
     return (

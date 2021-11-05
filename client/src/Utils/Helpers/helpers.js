@@ -13,3 +13,19 @@ export const formatDate = dateString => {
 
     return `${year}-${day}-${month}`
 }
+
+export const formatTimeline = (reports) => {
+    const timeline = reports.map(report => {
+        const procedures = report[1].map(r => {
+            return `-${r.objectType}`
+        })
+        return {
+            title: report[0],
+            cardTitle: ` ${report[0]} Summary`,
+            cardSubtitle: `Total health data points created this year: ${report[1].length}`,
+            cardDetailedText: procedures,
+        }
+    })
+
+    return timeline
+}

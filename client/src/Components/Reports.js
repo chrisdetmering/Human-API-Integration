@@ -1,51 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Chrono } from "react-chrono";
 import axios from 'axios';
 import NavBar from "../Utils/UI/NavBar";
-import { Button, Header, Icon, Segment } from 'semantic-ui-react'
+import { formatTimeline } from "../Utils/Helpers/helpers";
+import { Button, Header, Icon, Segment, Dimmer, Image, Loader } from 'semantic-ui-react'
 
 
 const Reports = () => {
-    const [show, setShow] = useState(false)
-    const [items, setItems] = useState([])
+    const [show, setShow] = useState(false);
+    const [items, setItems] = useState([]);
 
 
-    const getReports = () => {
+    useEffect(() => {
         axios(`/api/reports`)
             .then(response => {
-                console.log(response)
                 const timeline = formatTimeline(response.data.summary);
                 setItems(timeline);
                 setShow(true);
             })
             .catch(error => console.error(error))
-    }
+    }, [])
 
-    const formatTimeline = (reports) => {
-        const timeline = reports.map(report => {
-            const procedures = report[1].map(r => {
-                return `-${r.objectType}`
-            })
-            return {
-                title: report[0],
-                cardTitle: ` ${report[0]} Summary`,
-                cardSubtitle: `Total health data points created this year: ${report[1].length}`,
-                cardDetailedText: procedures,
-            }
-        })
-
-        return timeline
-    }
 
     const renderSegment = () => {
         if (!show) {
-            return (<Segment placeholder>
-                <Header icon>
-                    <Icon name='pdf file outline' />
-                    Click below to get a timeline overview of all your health data
-                </Header>
-                <Button primary onClick={getReports}>Get Health Summary</Button>
-            </Segment>)
+            return (
+                <Segment>
+                    <Dimmer active inverted>
+                        <Loader size='massive'>Syncing your health data to generate report.</Loader>
+                    </Dimmer>
+
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                </Segment>
+            )
+
+
+
+
+            // (<Segment placeholder>
+            //     <Header icon>
+            //         <Icon name='pdf file outline' />
+            //         Click below to get a timeline overview of all your health data
+            //     </Header>
+            //     <Button primary onClick={getReports}>Get Health Summary</Button>
+            // </Segment>)
         }
     }
 

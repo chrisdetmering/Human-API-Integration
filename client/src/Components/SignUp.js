@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Segment, Message } from "semantic-ui-react";
 import { Banner } from "../Utils/UI/HumanAPIBanner";
 
 
-const Login = ({ login }) => {
+const SignUp = ({ signUp }) => {
     const [userName, setUsername] = useState('')
     const [email, setEmail] = useState('')
 
-    const handleLogin = () => {
-        login(userName, email)
+    const handleSignUp = () => {
+        signUp(userName, email)
     }
 
     const isDisabled = () => {
@@ -46,18 +46,18 @@ const Login = ({ login }) => {
                             color='blue'
                             fluid
                             size='large'
-                            onClick={handleLogin}
+                            onClick={handleSignUp}
                         >
-                            Login
+                            Sign Up
                         </Button>
                     </Segment>
                 </Form>
                 <Message>
-                    New to us? <Link to="/signup">Sign Up</Link>
+                    Already have an account? <Link to="/">Login</Link>
                 </Message>
             </Grid.Column>
         </Grid>
     </>)
 }
 
-export default Login;
+export default SignUp;

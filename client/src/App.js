@@ -3,16 +3,18 @@ import axios from "axios";
 import {
   Switch,
   Route,
-  useHistory
+  useHistory,
+  Redirect
 } from "react-router-dom";
 import Clinical from "./Components/Clinical";
 import Connect from "./Components/Connect";
 import Login from "./Components/Login";
 import Reports from "./Components/Reports";
+import SignUp from "./Components/SignUp";
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
 
 
@@ -21,24 +23,24 @@ function App() {
       .then(response => {
         if (response.status === 200) {
           setSessionToken(response.data.session_token)
-        } else {
-          history.push('/')
         }
       })
-      .catch(() => {
-        history.push('/')
+      .catch(error => {
+        console.error(error)
       })
       .finally(() => {
         setIsLoading(false)
       })
   }, [])
 
-
+  const isLoggedToken = () => {
+    return sessionToken.length > 0
+  }
 
   const login = async (username, email) => {
     const config = {
       method: 'POST',
-      url: '/login',
+      url: '/api/id/token',
       headers: { 'content-type': 'application/json' },
       data: JSON.stringify({ client_user_id: username, client_user_email: email })
     }
@@ -50,7 +52,28 @@ function App() {
         history.push('/connect')
       }
     } catch (error) {
-      console.error(error)
+      alert('You need to sign up first before you can login')
+      console.error(error.message)
+    }
+  }
+
+  const signUp = async (username, email) => {
+    const config = {
+      method: 'POST',
+      url: '/api/session/token',
+      headers: { 'content-type': 'application/json' },
+      data: JSON.stringify({ client_user_id: username, client_user_email: email })
+    }
+
+    try {
+      const response = await axios(config);
+      if (response.status === 200) {
+        setSessionToken(response.data.session_token)
+        history.push('/connect')
+      }
+    } catch (error) {
+      alert('You already have an account :)')
+      console.error(error.message)
     }
   }
 
@@ -63,15 +86,32 @@ function App() {
       <Route exact path="/">
         <Login login={login} />
       </Route>
-      <Route path="/connect">
-        <Connect sessionToken={sessionToken} />
+      <Route exact path="/signup">
+        <SignUp signUp={signUp} />
       </Route>
-      <Route path="/clinical">
-        <Clinical />
-      </Route>
-      <Route path="/reports">
-        <Reports />
-      </Route>
+      <Route path="/connect" render={() => {
+        if (isLoggedToken()) {
+          return <Connect sessionToken={sessionToken} />
+        } else {
+          return <Redirect to="/signup" />
+        }
+      }} />
+
+      <Route path="/clinical" render={() => {
+        if (isLoggedToken()) {
+          return <Clinical />
+        } else {
+          return <Redirect to="/signup" />
+        }
+      }} />
+
+      <Route path="/reports" render={() => {
+        if (isLoggedToken()) {
+          return <Reports />
+        } else {
+          return <Redirect to="/signup" />
+        }
+      }} />
     </Switch>
   );
 }
