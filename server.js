@@ -78,9 +78,6 @@ server.post('/api/session/token', async (req, res) => {
     }
 })
 
-
-
-
 server.post('/logout', async (req, res) => {
     req.session.destroy((err) => {
         if (err) {
@@ -104,7 +101,6 @@ server.get('/session', async (req, res) => {
 })
 
 //HUMAN API
-//ACCESS TOKEN
 server.get('/api/access/token', async (req, res) => {
     const { client_user_id } = req.session
 

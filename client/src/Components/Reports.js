@@ -3,7 +3,7 @@ import { Chrono } from "react-chrono";
 import axios from 'axios';
 import NavBar from "../Utils/UI/NavBar";
 import { formatTimeline } from "../Utils/Helpers/helpers";
-import { Button, Header, Icon, Segment, Dimmer, Image, Loader } from 'semantic-ui-react'
+import { Segment, Dimmer, Image, Loader } from 'semantic-ui-react'
 
 
 const Reports = () => {
@@ -14,6 +14,7 @@ const Reports = () => {
     useEffect(() => {
         axios(`/api/reports`)
             .then(response => {
+                alert('Your reports are ready')
                 const timeline = formatTimeline(response.data.summary);
                 setItems(timeline);
                 setShow(true);
@@ -36,16 +37,6 @@ const Reports = () => {
                 </Segment>
             )
 
-
-
-
-            // (<Segment placeholder>
-            //     <Header icon>
-            //         <Icon name='pdf file outline' />
-            //         Click below to get a timeline overview of all your health data
-            //     </Header>
-            //     <Button primary onClick={getReports}>Get Health Summary</Button>
-            // </Segment>)
         }
     }
 
