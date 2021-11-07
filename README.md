@@ -6,20 +6,12 @@
     <img src="https://www.the-digital-insurer.com/wp-content/uploads/2019/03/Human_API_logo.png" alt="Logo" width="300" height="150">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Human API Integration</h3>
 
   <p align="center">
-    project_description
+    A take home project were you integration an app with Human API
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
+    <a href="https://human-api-integration.herokuapp.com/">View Demo</a>
 </div>
 
 
