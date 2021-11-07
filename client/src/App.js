@@ -72,7 +72,7 @@ function App() {
         history.push('/connect')
       }
     } catch (error) {
-      alert('You already have an account :)')
+      alert('You already have an account or have synced your data with Human API before. If that is the case, try the login page')
       console.error(error.message)
     }
   }
