@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="https://www.the-digital-insurer.com/wp-content/uploads/2019/03/Human_API_logo.png" alt="Logo" width="300" height="200">
+    <img src="https://www.the-digital-insurer.com/wp-content/uploads/2019/03/Human_API_logo.png" alt="Logo" width="300" height="150">
   </a>
 
 <h3 align="center">project_title</h3>
