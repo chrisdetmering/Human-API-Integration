@@ -25,4 +25,4 @@ server.use('/api', apiRoutes)
 
 
 server.get('*', (req, res) => res.sendFile(path.join(__dirname, './client/build/index.html')));
-server.listen(3000)
+server.listen(process.env.PORT || 3000)
