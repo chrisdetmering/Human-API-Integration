@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "humanapi-connect-client": "^2.4.1",
     "jscharting": "^3.1.0",
+    "jscharting-react": "^1.2.1",
     "react": "^17.0.2",
     "react-chrono": "^1.12.1",
     "react-dom": "^17.0.2",
@@ -43,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "cra-build-watch": "^3.4.0",
-    "jscharting-react": "^1.2.1"
+    "cra-build-watch": "^3.4.0"
   }
 }
