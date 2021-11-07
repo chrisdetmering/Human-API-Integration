@@ -10,7 +10,7 @@ const NavBar = () => {
     const history = useHistory()
 
     const logout = () => {
-        axios('/logout', { method: 'POST' })
+        axios('/auth/session', { method: 'DELETE' })
             .then(response => {
                 if (response.status === 200) {
                     history.push('/')

@@ -19,7 +19,7 @@ function App() {
 
 
   useEffect(() => {
-    axios('/session')
+    axios('/auth/session')
       .then(response => {
         if (response.status === 200) {
           setSessionToken(response.data.session_token)
@@ -40,7 +40,7 @@ function App() {
   const login = async (username, email) => {
     const config = {
       method: 'POST',
-      url: '/api/id/token',
+      url: '/auth/id/token',
       headers: { 'content-type': 'application/json' },
       data: JSON.stringify({ client_user_id: username, client_user_email: email })
     }
@@ -60,7 +60,7 @@ function App() {
   const signUp = async (username, email) => {
     const config = {
       method: 'POST',
-      url: '/api/session/token',
+      url: '/auth/session/token',
       headers: { 'content-type': 'application/json' },
       data: JSON.stringify({ client_user_id: username, client_user_email: email })
     }

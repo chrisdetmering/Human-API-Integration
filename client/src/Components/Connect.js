@@ -38,7 +38,7 @@ const Connect = ({ sessionToken }) => {
     }, [])
 
     const createAccessToken = () => {
-        axios('/api/access/token')
+        axios('/auth/access/token', { method: 'POST' })
             .then(response => response)
             .catch(error => {
                 console.error(error)
