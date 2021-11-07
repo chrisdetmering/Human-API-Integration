@@ -9,7 +9,7 @@
 <h3 align="center">Human API Integration</h3>
 
   <p align="center">
-    A take home project were you integration an app with Human API
+    An app that uses Human API's api to get health data for users
     <br />
     <a href="https://human-api-integration.herokuapp.com/">View Demo</a>
 </div>
@@ -57,14 +57,13 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
+
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Node.js](https://nodejs.org/en/)
+* [ExpressJS](https://expressjs.com/)
+* [Semantic-ui-React](https://react.semantic-ui.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [HumanAPI](https://reference.humanapi.co/docs)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
