@@ -118,9 +118,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Chris Detmering - [@LinkedIn](https://www.linkedin.com/in/chris-detmering-1b8b9851/) - email@chrisdetmering@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
