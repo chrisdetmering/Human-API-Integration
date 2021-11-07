@@ -52,7 +52,7 @@ function App() {
         history.push('/connect')
       }
     } catch (error) {
-      alert('You need to sign up first before you can login')
+      alert('Make sure you have signed up for an account :)')
       console.error(error.message)
     }
   }

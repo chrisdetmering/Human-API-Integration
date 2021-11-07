@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 const getAccessToken = async (client_user_id) => {
+
     const data = {
         client_id: process.env.CLIENT_ID,
         client_user_id: client_user_id,
