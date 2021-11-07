@@ -1,0 +1,9 @@
+CLIENT_ID=<Insert your unique client id>
+CLIENT_SECRET=<Insert your unique client secret>
+TOKEN_AUTH_ENDPOINT=<Insert token generation endpoint>
+SESSION_SECRET=<Insert random string>
+
+DB_USER=<Insert your database username>
+DB_HOST=<Insert the host of your database>
+DB_DATABASE=<Insert your database name>
+DB_PASSWORD=<Insert your database password>
