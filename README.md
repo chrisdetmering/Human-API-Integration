@@ -12,7 +12,7 @@ Here is an overview of all the steps:
 * [Downloading PostgreSQL](#downloading-postgresql)
 * [Create .env File](#create-dotenv-file)
 * [Backup SQL](#backup-sql)
-* [Installing Dependencies & Running Project](#installing-dependencies-&-running-project)
+* [Installing Dependencies & Running Project](#installing-dependencies-and-running-project)
 
 
 
