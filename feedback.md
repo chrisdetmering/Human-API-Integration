@@ -5,11 +5,11 @@ There are two things I would change: the documentation and the authorization flo
 
 ## Documentation 
 
-I think there are some things that could be a little better that would make it easier for a new developer looking at documentation! 
+I think there are some things that would make it easier for a new developer looking at documentation! 
 
 First. It would be helpful if the documentation were more visual. For example, some more code samples of what it would look like to integrate with the api. 
 
-Second: more linear. The dependencies were a little confusing and the documentation would jump around a little bit. It did make more sense after reading it over and building this application with it. However, it did seem like the docs would jump ahead or behind a little too much leading to some confusion of where the starting point was. Though it was clear you needed the client_id and the client_secret.
+Second: more linear. The dependencies were a little confusing and the documentation would jump around a bit. It did make more sense after reading it over and building this application with it. However, it did seem like the docs would jump ahead or behind a little too much leading to some confusion of where the starting point was. Though it was clear you needed the client_id and the client_secret.
 
 I think a possible solution to this would be a step by step guide using a project that the developer can download from git. This project would include a starting template and the finished product, as well as any in-between steps. They can follow along and learn how to integrate it with the project. 
 
@@ -27,7 +27,7 @@ My primary points of friction came from the same source: Understanding the Autho
 ![diagram](images/7.png)
 
 
-I think more diagram would have helped me understand your authorzation pattern. So if the diagram was something like: 
+I think a more linear diagram would have helped me understand your authorzation pattern. So if the diagram was something like: 
 
 New user > create session_token > HAPI Connected > connect source > etc.
 
