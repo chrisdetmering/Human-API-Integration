@@ -10,7 +10,7 @@ The hosted app can be seen [here](https://human-api-integration.herokuapp.com/).
 * This setup is for a MacBook Pro with macOS High Sierra version 10.13.6.
 * The reader has basic terminal navigation skills (how to navigate around files by using cd, for example).
 
-### Tech Stack 
+### Stack 
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 * [ExpressJS](https://expressjs.com/)
