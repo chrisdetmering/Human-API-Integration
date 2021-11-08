@@ -356,7 +356,7 @@ Localhost:3000 and you should see the project hosted!
 ### Open Connect Page 
 ![connect](images/3.png)
 
-### Connect Life Cycle Hook on Close Summary 
+### Connect Lifecycle Hook on Close Summary 
 ![connect](images/4.png)
 
 ### Clinical API
