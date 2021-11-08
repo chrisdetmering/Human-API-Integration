@@ -103,7 +103,7 @@ As with Node, check if the intallation was successful by running:
 npm -v
 ```
 
-You should see the following show up in tour terminal but with a newer version number: 
+You should see the following show up in our terminal but with a newer version number: 
 
 ![npm-v](images/npm-v.png)
 
@@ -144,7 +144,7 @@ git clone https://github.com/chrisdetmering/Human-API-Integration.git
 
 ## Opening Project in VSC
 
-On Visual Studio's home page, click the Open button: 
+In a new Visual Studio Code instance, click the Open button: 
 
 ![vsc](images/vsc.png)
 
@@ -189,7 +189,7 @@ This can be any random string that the app uses as the secret for the session.
 
 ## Downloading PostgreSQL
 
-For the next four environment variables, we are going to need to have PostgreSQL installed. 
+For the next four environment variables, we are going to need PostgreSQL installed. 
 To do this (and to download the other tools you are going to need) go to this [link](https://www.postgresql.org/download/macosx/) and click Download the installer: 
 
 ![pgsqlinstal](images/pgsqlinstal.png)
@@ -205,7 +205,7 @@ Click on the PostgreSQL 14 folder and inside you will see the following:
 
 ![pg14folder](images/pg14folder.png)
 
-Click on pgAdmin 4. You will be prompted to make up a master password. Save this because you will need it every time youreopen pgAdmin:
+Click on pgAdmin 4. You will be prompted to make up a master password. Save this because you will need it every time you reopen pgAdmin:
 
 ![mpwpg](images/mpwpg.png)
 
