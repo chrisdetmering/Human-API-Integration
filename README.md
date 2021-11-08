@@ -292,7 +292,7 @@ To create our database tables, you are going to select the database folder:
 
 And copy the contents of the backup.sql file 
 
-![sql-backup](images/sql-backu.png)
+![sql-backup](images/sql-backup.png)
 
 You will then navigate to pgAdmin and open the query tool by clicking on the human_api database and selecting the query tool option:
 
