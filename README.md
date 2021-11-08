@@ -1,4 +1,4 @@
-# Getting Started
+# Instructions Setup
 
 The following are detailed instructions on how to set this project up locally. 
 
@@ -30,6 +30,8 @@ Overview
 * [Create .env File](#create-dotenv-file)
 * [Backup SQL](#backup-sql)
 * [Installing Dependencies and Running Project](#installing-dependencies-and-running-project)
+* [Screenshots of App](#screenshots-of-app)
+
 
 
 
@@ -340,3 +342,5 @@ npm run dev
 Then go to 
 
 Localhost:3000 and you should see the project hosted! 
+
+## Screenshots of App
