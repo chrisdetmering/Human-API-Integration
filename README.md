@@ -1,102 +1,18 @@
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://www.the-digital-insurer.com/wp-content/uploads/2019/03/Human_API_logo.png" alt="Logo" width="300" height="150">
-  </a>
-
-<h3 align="center">Human API Integration</h3>
-
-  <p align="center">
-    An app that uses Human API's api to get health data for users
-    <br />
-    <a href="https://human-api-integration.herokuapp.com/">View Demo</a>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### Built With
-
-
-* [React.js](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en/)
-* [ExpressJS](https://expressjs.com/)
-* [Semantic-ui-React](https://react.semantic-ui.com/)
-* [PostgreSQL](https://www.postgresql.org/)
-* [HumanAPI](https://reference.humanapi.co/docs)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-
 ## Installation Steps
 
 Here is an overview of all the steps: 
 
-* [Installing Visual Studio Code (VSC)](#Installing-Visual-Studio-Code-(VSC))
-* [Installing Node & npm](#Installing-Node-&-npm)
+* [Installing Visual Studio Code (VSC)](#installing-visual-studio-code-(vsc))
+* [Installing Node & npm](#installing-node-&-npm)
 * [Git](#git)
-* [Cloning the Repo](#Cloning-the-Repo)
-* [Opening Project in VSC](#Open-Project-in-VSC)
-* [Sample_env File](#Sample_env-File)
-* [Downloading PostgreSQL](#Downloading-PostgreSQL)
-* [Create .env File](#Create-.env-File)
-* [Backup SQL](#Backup-SQL)
-* [Installing Dependencies & Running Project](#Installing-Dependencies-&-Running-Project)
+* [Cloning the Repo](#cloning-the-repo)
+* [Opening Project in VSC](#open-project-in-vsc)
+* [Sample_env File](#sample_env-file)
+* [Downloading PostgreSQL](#downloading-postgreSQL)
+* [Create .env File](#create-.env-file)
+* [Backup SQL](#backup-SQL)
+* [Installing Dependencies & Running Project](#installing-dependencies-&-running-project)
 
 
 
@@ -405,50 +321,3 @@ npm run dev
 Then go to 
 
 Localhost:3000 and you should see the project hosted! 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Chris Detmering - [@LinkedIn](https://www.linkedin.com/in/chris-detmering-1b8b9851/) - email@chrisdetmering@gmail.com
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
