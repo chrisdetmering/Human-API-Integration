@@ -200,7 +200,7 @@ After the wizard has completed, go to your Applications and look for a folder wi
 
 Click on the PostgreSQL 14 folder and inside you will see the following: 
 
-![pgsql14folder](images/pgsql14folde.png)
+![pg14folder](images/pg14folder.png)
 
 Click on pgAdmin 4 and you will be prompted to make up a master password. Be sure to save this as you will be prompted to enter this every time you have closed pgAdmin and opened it again. 
 
