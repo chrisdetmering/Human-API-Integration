@@ -9,7 +9,7 @@ CREATE TABLE "users" (
     "id" SERIAL NOT NULL, 
     "client_user_id" varchar NOT NULL, 
     "client_user_email" varchar NOT NULL
-);
+)
 
 WITH (OIDS=FALSE);
 
