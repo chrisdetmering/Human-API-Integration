@@ -1,12 +1,11 @@
 # Getting Started
 
-The following are detailed instructions on how to set this project up locally. There are certain assumptions we took in crafting these steps. We are going to list those next as well as the tech stack used in the development of this project.
+The following are detailed instructions on how to set this project up locally. 
 
 ### Assumptions
 
 
 * This setup is for a MacBook Pro with macOS High Sierra version 10.13.6.
-* You have none of the technologies listed in the tech stack installed on your computer.
 * You have basic terminal navigation skills (how to navigate around files by using cd, for example).
 
 ### Tech Stack 
@@ -36,10 +35,10 @@ Here is an overview of all the steps:
 
 ## Installing Visual Studio Code
 We are going to start this setup by making sure we have an IDE or text editor. 
-We are going to use [Visual Studio Code](https://code.visualstudio.com/). Click on the link provided and follow the instructions for downloading the text editor. 
+We are going to use [Visual Studio Code](https://code.visualstudio.com/). Click on the link provided and follow the instructions. 
 
 ## Installing Node and npm 
-Next, let's make sure we have Node.js installed and npm. To check for this navigate to your terminal (we are assuming you know how to do this) and type: 
+Next, let's make sure we have Node.js and npm installed. To check for this, navigate to your terminal and type: 
 
 ```
 node -v
@@ -51,8 +50,8 @@ And
 npm -v
 ```
 
-If you have node installed, for example, you should see a node version pop up in your 
-terminal same for npm. 
+If you have node installed, you should see a node version pop up in your 
+terminal: 
 
 ![node-v](images/node-v.png)
 
@@ -67,7 +66,7 @@ And then run:
 node -v
 ```
 
-Again. This time, you should see a Node version show up:
+You should see a Node version show up:
 
 ![node-v](images/node-v.png)
 
@@ -80,7 +79,8 @@ npm install -g npm
 
 !!!WARNING!!! 
 
-You might get the following error when you run this command in your Mac terminal
+
+You might get the following error after running the command above:
 
 ![npm-error](images/npm-error.png)
 
@@ -91,7 +91,7 @@ sudo npm install -g npm
 ```
 
 If you do this, you will be prompted to enter in your password that you used to 
-get into your Mac. 
+sign into your Mac. 
 
 As with Node, check if the intallation was successful by running:
 
@@ -124,15 +124,14 @@ git --version
 
 ## Cloning the Repo
 
-Now that we have git installed, let's clone down the repo. In order to do this, go 
-to the [projects repo](https://github.com/chrisdetmering/Human-API-Integration) or just 
-scroll up if you are already there and click the code button and then the 
+Now that we have git installed, it's time to clone down the repo. Go 
+to the [projects repo](https://github.com/chrisdetmering/Human-API-Integration) and click the Code button and then the 
 copy to keyboard button: 
 
 ![git-clone](images/git-clone.png)
 
-Then open up a terminal window and cd into the directory that you want to clone 
-the repo in to. You will then type into the terminal: 
+Now, open up a terminal window and cd into the directory that you want to clone 
+the repo in to. You will then type in the terminal: 
 
 ```
 git clone https://github.com/chrisdetmering/Human-API-Integration.git
@@ -141,47 +140,47 @@ git clone https://github.com/chrisdetmering/Human-API-Integration.git
 
 ## Opening Project in VSC
 
-Open Visual Studio and open the project by clicking the Open: 
+On Visual Studio's home page, click the Open button: 
 
 ![vsc](images/vsc.png)
 
-The file navigation will open up, select the folder you saved the cloned repo to. By default, it should be Human-API-Integration. Then click Open: 
+The file navigation will open up, select the folder you saved the cloned repo to. By default, it should be named Human-API-Integration. Then click Open: 
 
 ![hapi-open](images/hapi-open.png)
 
 ## Sample_env File
 
-After you have opened the project, the file structure should look like this: 
+The project file structure should look like this: 
 
 ![files](images/files.png)
 
-Click on the sample_env file 
+Click on the sample_env file:
 
 ![sample-env](images/sample-env.png)
 
 Inside of this file, we have a schema for creating our .env file. An .env file is where we keep or environment variables for the project that we don’t want to make public, 
-like secret API keys or Database passwords. The file should look like this: 
+like secret API keys or Database passwords: 
 
 ![sample-env-demo](images/sample-env-demo.png)
 
-Let’s fill these in first and then we will make our .env file and copy and paste what we filled in this file to our .env file. 
+We are going to set each of the variables in your sample_env and the copy the contents to a .env file.
 
-We are going to take each one of these step by step. 
+We are going to take each one of environment variables step by step. 
 ```
 CLIENT_ID & CLIENT_SECRET 
 ```
-These two environment variables you are going to get by contacting contact@humanapi.co to set up an active contract. 
+You get these two varibles by contacting contact@humanapi.co to set up an active contract. 
 
 ```
 TOKEN_AUTH_ENDPOINT 
 ```
-Per the [Human API docs](https://reference.humanapi.co/docs/start-a-user-session) this will be 
+According to the [Human API docs](https://reference.humanapi.co/docs/start-a-user-session) this will be 
 https://auth.humanapi.co/v1/connect/token
 
 ```
 SESSION_SECRET
 ```
-This can be any random string that the app uses as the secret for the session 
+This can be any random string that the app uses as the secret for the session. 
 
 
 ## Downloading PostgreSQL
@@ -192,9 +191,9 @@ To do this (and to download the other tools you are going to need) go to this [l
 ![pgsqlinstal](images/pgsqlinstal.png)
 
 
-This will take you through an installer that will download psql, a CLI for interacting with PostgreSQL & pgAdmin a GUI for interacting with your postgreSQL server. Take note of the password that you are prompted to make in the setup wizard. You will need to keep that for our environment variables. 
+This will take you through an installer that will download psql, a CLI for interacting with PostgreSQL & pgAdmin a GUI for interacting with postgreSQL. Take note of the password that you are prompted to make in the setup wizard. You will need to keep that for our environment variables. 
 
-After the wizard has completed, go to your Applications and look for a folder with the name of PostgreSQL 14 
+After the wizard has completed, go to your Applications and look for a folder with the name of PostgreSQL 14: 
 
 ![pgsql14](images/pgsql14.png)
 
@@ -202,36 +201,36 @@ Click on the PostgreSQL 14 folder and inside you will see the following:
 
 ![pg14folder](images/pg14folder.png)
 
-Click on pgAdmin 4 and you will be prompted to make up a master password. Be sure to save this as you will be prompted to enter this every time you have closed pgAdmin and opened it again. 
+Click on pgAdmin 4. You will be prompted to make up a master password. Save this because you will need it every time youreopen pgAdmin:
 
 ![mpwpg](images/mpwpg.png)
 
-Next, click on servers and you should see PostgreSQL be the only server listed. Additionally, there will be a pop up that will ask you for the password that we saved earlier for postgreSQL in the setup wizard. 
+Next, click on servers and you should see PostgreSQL listed. Additionally, there will be a pop up that will ask you for the password that we saved earlier for postgreSQL in the setup wizard. 
 
 
 ![pgpw](images/pgpw.png)
 
-With what we have done so far with postgreSQL, we can fill in 3/4 remaining environment variables. 
+With this, we can fill in 3/4 remaining environment variables. 
 
 
 ```
 DB_PASSWORD=password 
 ```
-This will be set to the password you just entered. So in my case, my password was ‘password’. Therefore 
+This will be set to the password you just entered. So in my case, my password was ‘password’. 
 
 
 ```
 DB_HOST=localhost
 ```
 !!!WARNING!!! 
+
 Use localhost instead of 5432 because this might make you run into an error while interacting with the session. 
-We are not sure why this is the case but this is the only work around we could find. 
 
 ```
 DB_USER=postgres 
 ```
 
-This is the default user for postgreSQL unless you set it to something else. If you set it to something else, insert that here.
+This is the default user for postgreSQL. If you set it to something else, insert that here.
 
 We just need one more environment variable and that is 
 
