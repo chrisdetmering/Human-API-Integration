@@ -240,15 +240,15 @@ DB_DATABASE
 
 We do not have this yet because we have not created it. We will do that now. 
 
-Click on the PostgreSQL 14 server you will see some options including Databases toggle open 
+Click on the PostgreSQL 14 server you will see some options:
 
 ![dbserver](images/dbserver.png)
 
-Click on Databases and a tooltip will pop open. There will be an option to create a database:
+Right click on Databases and a tooltip will pop open. There will be an option to create a database:
 
 ![dbcreate](images/dbcreate.png)
 
-Click on Create > Database and pick a name for the DB. For example, human_api
+Click on Create > Database and pick a name for the DB. For example, human_api:
 
 ![db-name](images/db-name.png)
 
@@ -256,9 +256,11 @@ Click the Save button and then your DB will be created.
 
 Now we can fill in our last environment variable: 
 
-DB_DATABASE=human_api (or whatever you named it) 
+```
+DB_DATABASE=human_api
+```
 
-Let’s make our .env file now that we have all the environment variables filled in. We will turn to that next. 
+Let’s make our .env file now that we have all the environment variables filled in.
 
 
 ## Create Dotenv File
