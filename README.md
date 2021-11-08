@@ -1,12 +1,12 @@
-# Instructions Setup
+#  Setup Instructions + Screenshots
 
 The following are detailed instructions on how to set this project up locally. 
 
 ### Assumptions
 
-
+* These instructions assume a beginner to development
 * This setup is for a MacBook Pro with macOS High Sierra version 10.13.6.
-* You have basic terminal navigation skills (how to navigate around files by using cd, for example).
+* The reader has basic terminal navigation skills (how to navigate around files by using cd, for example).
 
 ### Tech Stack 
 * [React.js](https://reactjs.org/)
@@ -344,3 +344,22 @@ Then go to
 Localhost:3000 and you should see the project hosted! 
 
 ## Screenshots of App
+
+### Login 
+![login](images/1.png)
+
+### Connect Page 
+![connect](images/2.png)
+
+### Open Connect Page 
+![connect](images/3.png)
+
+### Connect Life Cycle Hook on Close Summary 
+![connect](images/4.png)
+
+### Clinical API
+![clinical](images/5.png)
+
+### Reports API
+![clinical](images/6.png)
+
