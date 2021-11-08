@@ -196,20 +196,20 @@ This will take you through an installer that will download psql, a CLI for inter
 
 After the wizard has completed, go to your Applications and look for a folder with the name of PostgreSQL 14 
 
-<Screenshot>
+![pgsql14](images/pgsql14.png)
 
 Click on the PostgreSQL 14 folder and inside you will see the following: 
 
-<Screenshot>
+![pgsql14folder](images/pgsql14folde.png)
 
 Click on pgAdmin 4 and you will be prompted to make up a master password. Be sure to save this as you will be prompted to enter this every time you have closed pgAdmin and opened it again. 
 
-<Screenshot>
+![mpwpg](images/mpwpg.png)
 
 Next, click on servers and you should see PostgreSQL be the only server listed. Additionally, there will be a pop up that will ask you for the password that we saved earlier for postgreSQL in the setup wizard. 
 
 
-<Screenshot>
+![pgpw](images/pgpw.png)
 
 With what we have done so far with postgreSQL, we can fill in 3/4 remaining environment variables. 
 
@@ -243,15 +243,15 @@ We do not have this yet because we have not created it. We will do that now.
 
 Click on the PostgreSQL 14 server you will see some options including Databases toggle open 
 
-<Screenshot>
+![dbserver](images/dbserver.png)
 
 Click on Databases and a tooltip will pop open. There will be an option to create a database:
 
-<Screenshot>
+![dbcreate](images/dbcreate.png)
 
 Click on Create > Database and pick a name for the DB. For example, human_api
 
-<Screenshot>
+![db-name](images/db-name.png)
 
 Click the Save button and then your DB will be created. 
 
@@ -266,13 +266,13 @@ Let’s make our .env file now that we have all the environment variables filled
 
 In order to do this, you can select to create a new file in Visual Studio Code 
 
-<Screenshot>
+![env-name](images/env-name.png)
 
 And name it .env. 
 
 We are going to copy and paste all the variables we have filled in so far. Your file should now look like this: 
 
-<Screenshot>
+![env-fin](images/env-fin.png)
 
 Note that CLIENT_ID & CLIENT_SECRET are not filled in. You will need to get this from HumanAPI directly. 
 Additionally, note that I just typed in a random string for the SESSION_SECRET. 
@@ -288,21 +288,21 @@ We have a couple more things we need to do: create our database tables and insta
 
 To create our database tables, you are going to select the database folder: 
 
-<Screenshot>
+![backupsql](images/backupsql.png)
 
 And copy the contents of the backup.sql file 
 
-<Screenshot>
+![sql-backup](images/sql-backu.png)
 
 You will then navigate to pgAdmin and open the query tool by clicking on the human_api database and selecting the query tool option:
 
-<Screenshot>
+![query](images/query.png)
 
 This will pull up an interface that will allow you to paste in the SQL code you copied from the backup.sql file. 
 
 Click the arrow button after you have pasted in all the SQL code: 
 
-<Screenshot>
+![run-query](images/run-query.png)
 
 This will run your SQL query. Any errors that happen during the running of these sql scripts you will see below. 
 Otherwise you will see “Query returned successfully in x msec”.
@@ -310,7 +310,7 @@ Otherwise you will see “Query returned successfully in x msec”.
 
 Aftering doing this, you should be able to navigate to your human_api database click on the Tables sections and see your newly created tables:
 
-<Screenshot>
+![check-tables](images/check-tables.png)
 
 ## Installing Dependencies and Running Project
 
