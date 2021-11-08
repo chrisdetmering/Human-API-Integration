@@ -1,3 +1,21 @@
+# Getting Started
+
+The following are detailed instructions on how to set this project up locally. There are certain assumptions we took in crafting these steps. We are going to list those next as well as the tech stack used in the development of this project.
+
+### Assumptions
+
+
+* This setup is for a MacBook Pro with macOS High Sierra version 10.13.6.
+* You have none of the technologies listed in the tech stack installed on your computer.
+* You have basic terminal navigation skills (how to navigate around files by using cd, for example).
+
+### Tech Stack 
+* [React.js](https://reactjs.org/)
+* [Node.js](https://nodejs.org/en/)
+* [ExpressJS](https://expressjs.com/)
+* [Semantic-Ui-React](https://react.semantic-ui.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [HumanAPI](https://reference.humanapi.co/docs)
 
 ## Installation Steps
 
@@ -12,7 +30,7 @@ Here is an overview of all the steps:
 * [Downloading PostgreSQL](#downloading-postgresql)
 * [Create .env File](#create-dotenv-file)
 * [Backup SQL](#backup-sql)
-* [Installing Dependencies & Running Project](#installing-dependencies-and-running-project)
+* [Installing Dependencies and Running Project](#installing-dependencies-and-running-project)
 
 
 
