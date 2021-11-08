@@ -54,7 +54,7 @@ npm -v
 If you have node installed, for example, you should see a node version pop up in your 
 terminal same for npm. 
 
-<insert screenshot>
+![node](images/node.png)
 
 If you do not have Node.js. Then navigate to [Node's website](https://nodejs.org/en/) and 
 download the latest stable version (LTS). 
