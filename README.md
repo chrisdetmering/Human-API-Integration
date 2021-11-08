@@ -66,7 +66,7 @@ And then run:
 node -v
 ```
 
-You should see a Node version show up:
+You should see a Node version show up (the newer version):
 
 ![node-v](images/node-v.png)
 
