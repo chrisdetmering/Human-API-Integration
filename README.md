@@ -262,7 +262,7 @@ You can generate this however you want.
 Lastly, all the DB information is what we filled in, in the last couple of steps. 
 If you did not choose the default name postgres as your database user, then the DB_USER environment variable should reflect that. 
 
-## Backup 
+## Backup SQL
 
 We are almost there! 
 
@@ -294,7 +294,7 @@ Aftering doing this, you should be able to navigate to your human_api database c
 
 <Screenshot>
 
-## Installing Dependencies & Running Project
+## Installing Dependencies and Running Project
 
 Last step! 
 
