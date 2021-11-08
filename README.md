@@ -244,7 +244,7 @@ DB_DATABASE=human_api (or whatever you named it)
 Let’s make our .env file now that we have all the environment variables filled in. We will turn to that next. 
 
 
-## Create .env File
+## Create Dotenv File
 
 In order to do this, you can select to create a new file in Visual Studio Code 
 
