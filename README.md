@@ -2,6 +2,8 @@
 
 The following are detailed instructions on how to set this project up locally. 
 
+The hosted app can be seen [here](https://human-api-integration.herokuapp.com/).
+
 ### Assumptions
 
 * These instructions assume a beginner to development
