@@ -39,7 +39,7 @@ Overview
 
 ## Installing Visual Studio Code
 We are going to start this setup by making sure we have an IDE or text editor. 
-We are going to use [Visual Studio Code](https://code.visualstudio.com/). Click on the link provided and follow the instructions. 
+We are going to use [Visual Studio Code](https://code.visualstudio.com/). Click on the [link provided](https://code.visualstudio.com/) and follow the instructions. 
 
 ## Installing Node and npm 
 Next, let's make sure we have Node.js and npm installed. To check for this, navigate to your terminal and type: 
