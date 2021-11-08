@@ -3,24 +3,24 @@
 
 Here is an overview of all the steps: 
 
-* [Installing Visual Studio Code (VSC)](#installing-visual-studio-code-(vsc))
-* [Installing Node & npm](#installing-node-&-npm)
+* [Installing Visual Studio Code (VSC)](#installing-visual-studio-code)
+* [Installing Node & npm](#installing-node-and-npm)
 * [Git](#git)
 * [Cloning the Repo](#cloning-the-repo)
-* [Opening Project in VSC](#open-project-in-vsc)
+* [Opening Project in VSC](#opening-project-in-vsc)
 * [Sample_env File](#sample_env-file)
-* [Downloading PostgreSQL](#downloading-postgreSQL)
-* [Create .env File](#create-.env-file)
-* [Backup SQL](#backup-SQL)
+* [Downloading PostgreSQL](#downloading-postgresql)
+* [Create .env File](#create-dotenv-file)
+* [Backup SQL](#backup-sql)
 * [Installing Dependencies & Running Project](#installing-dependencies-&-running-project)
 
 
 
-## Installing Visual Studio Code (VSC)
+## Installing Visual Studio Code
 We are going to start this setup by making sure we have an IDE or text editor. 
 We are going to use [Visual Studio Code](https://code.visualstudio.com/). Click on the link provided and follow the instructions for downloading the text editor. 
 
-## Installing Node & npm 
+## Installing Node and npm 
 Next, let's make sure we have Node.js installed and npm. To check for this navigate to your terminal (we are assuming you know how to do this) and type: 
 
 ```
