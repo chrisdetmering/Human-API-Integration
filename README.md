@@ -18,7 +18,7 @@ The following are detailed instructions on how to set this project up locally.
 
 ## Installation Steps
 
-Here is an overview of all the steps: 
+Overview
 
 * [Installing Visual Studio Code (VSC)](#installing-visual-studio-code)
 * [Installing Node & npm](#installing-node-and-npm)
