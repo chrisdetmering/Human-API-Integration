@@ -54,12 +54,12 @@ npm -v
 If you have node installed, for example, you should see a node version pop up in your 
 terminal same for npm. 
 
-![node](images/node.png)
+![node-v](images/node-v.png)
 
 If you do not have Node.js. Then navigate to [Node's website](https://nodejs.org/en/) and 
 download the latest stable version (LTS). 
 
-<insert screenshot>
+![node](images/node.png)
 
 And then run:
 
@@ -69,7 +69,7 @@ node -v
 
 Again. This time, you should see a Node version show up:
 
-<insert screenshot>
+![node-v](images/node-v.png)
 
 
 If you do not have npm installed, then run: 
@@ -82,7 +82,7 @@ npm install -g npm
 
 You might get the following error when you run this command in your Mac terminal
 
-<Insert error screenshot>
+![npm-error](images/npm-error.png)
 
 If you get this, then try:
 
@@ -101,7 +101,7 @@ npm -v
 
 You should see the following show up in tour terminal but with a newer version number: 
 
-<Screenshot>
+![npm-v](images/npm-v.png)
 
 ## Git
 
@@ -113,7 +113,7 @@ git --version
 
 If you are on a Mac then you will most likely get a pop up that looks like this: 
 
-<Screenshot>
+![git-mac](images/git-mac.png)
 
 If that is the case, then click on install. As we have done previously, let's make sure 
 that the installation worked by running: 
@@ -129,7 +129,7 @@ to the [projects repo](https://github.com/chrisdetmering/Human-API-Integration) 
 scroll up if you are already there and click the code button and then the 
 copy to keyboard button: 
 
-<Screenshot>
+![git-clone](images/git-clone.png)
 
 Then open up a terminal window and cd into the directory that you want to clone 
 the repo in to. You will then type into the terminal: 
@@ -143,26 +143,26 @@ git clone https://github.com/chrisdetmering/Human-API-Integration.git
 
 Open Visual Studio and open the project by clicking the Open: 
 
- <Screenshot>
+![vsc](images/vsc.png)
 
 The file navigation will open up, select the folder you saved the cloned repo to. By default, it should be Human-API-Integration. Then click Open: 
 
-<Screenshot>
+![hapi-open](images/hapi-open.png)
 
 ## Sample_env File
 
 After you have opened the project, the file structure should look like this: 
 
-<Screenshot>
+![files](images/files.png)
 
 Click on the sample_env file 
 
-<Screenshot>
+![sample-env](images/sample-env.png)
 
 Inside of this file, we have a schema for creating our .env file. An .env file is where we keep or environment variables for the project that we don’t want to make public, 
 like secret API keys or Database passwords. The file should look like this: 
 
-<Screenshot>
+![sample-env-demo](images/sample-env-demo.png)
 
 Let’s fill these in first and then we will make our .env file and copy and paste what we filled in this file to our .env file. 
 
@@ -187,9 +187,9 @@ This can be any random string that the app uses as the secret for the session
 ## Downloading PostgreSQL
 
 For the next four environment variables, we are going to need to have PostgreSQL installed. 
-To do this (and to download the other tools you are going to need) go to this [link](https://www.postgresql.org/download/macosx/)   and click Download the installer: 
+To do this (and to download the other tools you are going to need) go to this [link](https://www.postgresql.org/download/macosx/) and click Download the installer: 
 
-<Screenshot>
+![pgsqlinstal](images/pgsqlinstal.png)
 
 
 This will take you through an installer that will download psql, a CLI for interacting with PostgreSQL & pgAdmin a GUI for interacting with your postgreSQL server. Take note of the password that you are prompted to make in the setup wizard. You will need to keep that for our environment variables. 
