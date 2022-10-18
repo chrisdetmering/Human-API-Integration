@@ -1,8 +1,18 @@
-#  Setup Instructions + Screenshots
+#  Human-Api-Integration 
+
+* A job interview assignment completed in < 40 hours
+* It required Integrating with Human API’s external API
+* Graphed vitals fetched from their Clinical API
+* Structured lifetime health data of user in a timeline view fetch from their Reports API
+* Use these Login credentials to view live demo:
+  * username: chris
+  * email: chrisdetmering@gmail.com
+  * View it live [here](https://human-api-integration.herokuapp.com/).
+
+
+# Setup Instructions + Screenshots
 
 The following are detailed instructions on how to set this project up locally. 
-
-The hosted app can be seen [here](https://human-api-integration.herokuapp.com/).
 
 ### Assumptions
 
